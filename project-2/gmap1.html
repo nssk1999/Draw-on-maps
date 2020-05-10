@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <div>
+      <form id="f1">
+        <label for="sets"></label>
+        <select name="sets" id="sets" >
+          <option value="apartments"  >apartments</option>
+          <option value="villas">villas</option>
+          <option value="guest_homes">Guest homes</option>
+          <option value="commercials">Commercial</option>
+          <option value="barrens">Barrens</option>
+        </select>
+        <button type="submit">set</button>
+      </form>
+    </div>
+    <!-- <script>
+// Initialize and add the map
+function initMap() {
+  // The location of mvsr
+  var mvsr = {lat: 17.281825,lng: 78.538388};
+  // The map, centered at mvsr
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 18, center: mvsr});
+  // The marker, positioned at mvsr
+  var marker = new google.maps.Marker({position: mvsr, map: map});
+
+  
+}
+    </script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script  src="gmaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwk1GgAkyolfZ_9cXYjCmRinRJhVxorYE&callback=initMap"
+    async defer></script>
+  </body>
+</html>

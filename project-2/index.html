@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta httpioequiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignmet_V2</title>
+  <!-- <link rel = "icon" href ="/img/cse3.png" type = "image/x-icon">  -->
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- ios support -->
+  <!-- <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png"> -->
+  <meta name="apple-mobile-web-app-status-bar" content="#bf5700">
+  <meta name="theme-color" content="#bf5700">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/">Assignment-<span>2</span></a>
+      <span class="right grey-text hide-on-large-only text-darken-1">
+        <i class="material-icons white-text sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+      
+      <ul id="nav-menu" class=" black-text right">
+        <li><a href="#" onclick="logout()" id="lo" class="hide waves-effect">SIGN-OUT</a></li>
+        <!-- <li><a href="/" class="hide-on-med-and-down waves-effect">Home</a></li> -->
+        <li><a href="login.html" class="hide-on-med-and-down waves-effect">Contribute</a></li>
+        <li><a href="/pages/contact.html" class="hide-on-med-and-down waves-effect">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">assgn</a></li>
+    <!-- <li><a href="/" class="waves-effect">Home</a></li> -->
+    <li><a href="login.html" class="waves-effect">Contribute</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/pages/contact.html" class="waves-effect">
+      <i class="material-icons">mail_outline</i>Contact&About</a>
+    </li>
+  </ul>
+  <!--firebase login system -->
+  <div id="login-set" class="login container card-panel center">
+    <form id="f2" class="login-form  container section">
+        <h6 >LOGIN</h6>
+        <br>
+        <p>As the site is still under devlopment we provide a Dummy Account</p>
+        <p>Acccount details: test@test.com and pwd: testing</p>
+        <div class="divider"></div>
+        <br><br>
+        <div class="input-field">
+          <input placeholder="E-mail-ID Plz" id="mail" type="email" class="validate">
+          <label for="mail">E-mail ID</label>
+          <span class="helper-text" data-error="wrong" data-success="right"></span>
+        </div>
+        <div class="input-field" >
+          <input type="password" placeholder="Password plz" id="pwed" class="validate">
+          <label for="pwd">Password</label>
+        <!-- <span class="helper-text" dataioerror="wrong" data-success="right">Helper text</span> -->
+        </div>
+        <div class="input-field center">
+          <button type="submit" class="btn-small">Log-in</button>
+        </div>
+      </form>
+  </div>
+
+  <div id="loading" class="container hide ">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <!-- classos -->
+  <div id="logout-p" class="classes container  grey-text text-darken-1">
+    <div class="container" id="map"></div>
+    </div>
+    <br>
+    <div  id="f1" class="container  row">
+      <button class="btn col s12 l1 m2 pink" value="all" onclick="run(value)">all</button>
+      <div class="col s2 hide-on-med-and-down "></div>
+      <button class="btn col s12 l2 m2 red" value="apartments" onclick="run(value)"> apartment</button>
+      <div class="col l3 hide-on-med-and-down"></div>
+      <button class="btn col s12 l1  m2 purple" value="villas" onclick="run(value)"> villas</button>
+      <div class="col l12 hide-on-med-and-down"><br></div>
+
+      <button class="btn col s12 l2 m2 blue" value="guest_homes" onclick="run(value)"> guest_homes</button>
+      <div class="col s2 hide-on-med-and-down"></div>
+      <button class="btn col s12 l2 m2 green" value="commercials" onclick="run(value)"> commercials</button>
+      <div class="col s2 hide-on-med-and-down"></div>
+      <button class="btn col s12 l2 m2 yellow" value="barrens" onclick="run(value)">Barrens</button>
+    </div> 
+
+  </div> 
+
+  <!-- add classo side nav -->
+  
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwk1GgAkyolfZ_9cXYjCmRinRJhVxorYE&callback=initMap"
+  async defer></script>
+  <script src="/js/innl.js"></script>
+  <script src="/js/app-l.js"></script>
+  <script src="/js/db-l.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="gmaps2.js"></script>
+</body>
+</html>
